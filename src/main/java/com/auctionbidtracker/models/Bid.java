@@ -1,9 +1,12 @@
 package com.auctionbidtracker.models;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "bid")
+@Data
 public class Bid {
 
     @Id

@@ -4,5 +4,5 @@ import com.auctionbidtracker.service.ChallengeService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ChallengeServiceImpl implements ChallengeService{
+public class ChallengeServiceImpl implements ChallengeService {
 }

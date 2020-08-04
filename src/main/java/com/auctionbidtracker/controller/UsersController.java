@@ -15,8 +15,7 @@ public class UsersController {
     UsersService usersService;
 
     @PostMapping()
-    public Users saveUser(Users users)
-    {
+    public Users saveUser(Users users) {
         return usersService.addUser(users);
     }
 }

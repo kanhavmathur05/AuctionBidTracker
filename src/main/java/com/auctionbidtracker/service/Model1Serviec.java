@@ -10,8 +10,7 @@ public class Model1Serviec {
     @Autowired
     Model1Interface model1Interface;
 
-    public String method101()
-    {
+    public String method101() {
         return "Method returns String";
     }
 }

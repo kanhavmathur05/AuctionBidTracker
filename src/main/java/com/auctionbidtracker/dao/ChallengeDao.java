@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ChallengeDao extends CrudRepository<Challenge,Integer> {
+public interface ChallengeDao extends CrudRepository<Challenge, Integer> {
 }

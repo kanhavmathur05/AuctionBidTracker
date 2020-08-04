@@ -1,7 +1,7 @@
 package com.auctionbidtracker.controller;
 
-import com.auctionbidtracker.models.Model1;
 import com.auctionbidtracker.dao.Model1Interface;
+import com.auctionbidtracker.models.Model1;
 import com.auctionbidtracker.service.Model1Serviec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +19,7 @@ public class HomeController {
 
     @GetMapping("/getText")
     public Model1 get() {
-        Model1 m=new Model1();
+        Model1 m = new Model1();
         m.setName("sildjfli");
         return model1Interface.save(m);
     }

@@ -1,4 +1,4 @@
-#AuctionBidTracker
+# AuctionBidTracker
 
 This project is a basic implementation of auction bid tracker system where a user can bid on items created by the admin to win.
 This project is the backend implementation of the project in technologies such as SpringBoot, SpringData JPA, MySql etc,.
@@ -20,7 +20,7 @@ http://localhost:8080/swagger-ui.html
 To test these API's in Postman a json file by the name------is created in it.
 Just open that file in Postman and you will be able to test all the API's when the server is running.
 
-###Steps to use this project
+### Steps to use this project
 1) After cloning the project from git create a database with name "auctionBidTrackerDB".
 2) Change the MySql username and password in application.properties file according to your system.
 3) Start the project as a SpringBoot Application. By doing this the tables will be created in your database and the server will be up and running.

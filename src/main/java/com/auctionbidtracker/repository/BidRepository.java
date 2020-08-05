@@ -14,8 +14,6 @@ public interface BidRepository extends CrudRepository<Bid, Integer> {
 
     Page<Bid> findAllByItemIdOrderByBidPriceDesc(int itemId, Pageable pageable);
 
-    TreeSet<Bid> findAllByItemId(int itemId);
-
     List<Bid> findAllByUserId(int userId);
 
     List<Bid> findAllByItemIdOrderByBidPriceDesc(int itemId);

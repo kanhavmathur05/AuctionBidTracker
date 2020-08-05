@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.TreeSet;
 
 @Service
 public class BidServiceImpl implements BidService {
@@ -40,16 +41,20 @@ public class BidServiceImpl implements BidService {
 
     @Override
     public BidDTO saveBidForItem(BidDTO bidDTO) {
-
         try {
             Bid bid = bidMapper.toEntity(bidDTO);
-//        TreeSet<Bid> bidList = bidDao.findAllByItemId(bid.getItemId());
-//        if (bid.getBidPrice() <= bidList.last().getBidPrice()) {
-//            //throw error
-//        } else {
-            bid = bidRepository.save(bid);
-            bidDTO = bidMapper.toDTO(bid);
-//        }
+            List<Bid> bidList = bidRepository.findAllByItemIdOrderByBidPriceDesc(bid.getItemId());
+            if (!bidList.isEmpty()) {
+                if (bid.getBidPrice() <= bidList.get(0).getBidPrice()) {
+                    throw new Exception("Current Bid Value is less than the last heighest bid Value");
+                } else {
+                    bid = bidRepository.save(bid);
+                    bidDTO = bidMapper.toDTO(bid);
+                }
+            } else {
+                bid = bidRepository.save(bid);
+                bidDTO = bidMapper.toDTO(bid);
+            }
         } catch (Exception ex) {
             ex.printStackTrace();
         }

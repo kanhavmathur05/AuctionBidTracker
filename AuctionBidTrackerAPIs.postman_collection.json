@@ -84,7 +84,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userName\":\"Max\",\n    \"accountBalance\":300000\n}",
+					"raw": "{\n    \"userName\":\"Robert\",\n    \"accountBalance\":20000\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -92,7 +92,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/save-bid",
+					"raw": "http://localhost:8080/api/save-user",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -100,7 +100,7 @@
 					"port": "8080",
 					"path": [
 						"api",
-						"save-bid"
+						"save-user"
 					]
 				}
 			},
@@ -134,7 +134,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\":1234,\n    \"itemId\":3334,\n    \"bidPrice\":80000\n}",
+					"raw": "{\n    \"userId\":2,\n    \"itemId\":1,\n    \"bidPrice\":44520000\n}",
 					"options": {
 						"raw": {
 							"language": "json"

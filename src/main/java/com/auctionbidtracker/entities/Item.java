@@ -1,7 +1,10 @@
 package com.auctionbidtracker.entities;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 @Table(name = "item")
 public class Item {

@@ -16,8 +16,6 @@ import java.util.List;
 @RequestMapping("/api")
 public class ItemController {
 
-    //get all the items on which a user has bid
-
     @Autowired
     ItemService itemService;
 

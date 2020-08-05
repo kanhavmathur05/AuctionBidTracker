@@ -16,6 +16,4 @@ public interface BidMapper {
     BidDTO toDTO(Bid bid);
 
     Bid toEntity(BidDTO bidDTO);
-
-    List<BidDTO> toDTOList(Page<Bid> list);
 }

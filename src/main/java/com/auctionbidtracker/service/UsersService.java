@@ -7,5 +7,5 @@ import com.auctionbidtracker.entities.Users;
 public interface UsersService {
     UsersDTO addUser(UsersDTO usersDTO);
 
-    Users getUserById(int userId);
+    UsersDTO getUserById(int userId);
 }

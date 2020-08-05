@@ -1,7 +1,7 @@
 package com.auctionbidtracker.mapper;
 
 import com.auctionbidtracker.dto.ItemDTO;
-import com.auctionbidtracker.models.Item;
+import com.auctionbidtracker.entities.Item;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

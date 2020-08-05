@@ -1,6 +1,6 @@
 package com.auctionbidtracker.vm;
 
-import com.auctionbidtracker.models.Users;
+import com.auctionbidtracker.entities.Users;
 
 public class ItemVm {
     private Users users;

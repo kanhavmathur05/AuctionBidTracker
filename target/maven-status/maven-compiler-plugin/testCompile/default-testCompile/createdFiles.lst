@@ -1,1 +1,4 @@
+com/auctionbidtracker/UserControllerTestCases.class
+com/auctionbidtracker/ItemControllerTestCases.class
 com/auctionbidtracker/AuctionBidTrackerApplicationTests.class
+com/auctionbidtracker/BidControllerTestCases.class

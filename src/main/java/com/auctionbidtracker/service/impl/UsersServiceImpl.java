@@ -1,7 +1,9 @@
 package com.auctionbidtracker.service.impl;
 
-import com.auctionbidtracker.dao.UsersDao;
-import com.auctionbidtracker.models.Users;
+import com.auctionbidtracker.dto.UsersDTO;
+import com.auctionbidtracker.mapper.UsersMapper;
+import com.auctionbidtracker.entities.Users;
+import com.auctionbidtracker.repository.UsersRepository;
 import com.auctionbidtracker.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,15 +12,20 @@ import org.springframework.stereotype.Service;
 public class UsersServiceImpl implements UsersService {
 
     @Autowired
-    UsersDao usersDao;
+    UsersRepository usersRepository;
+
+    @Autowired
+    UsersMapper usersMapper;
 
     @Override
-    public Users addUser(Users user) {
-        return usersDao.save(user);
+    public UsersDTO addUser(UsersDTO usersDTO) {
+        Users users = usersMapper.toEntity(usersDTO);
+        usersDTO = usersMapper.toDTO(usersRepository.save(users));
+        return usersDTO;
     }
 
     @Override
     public Users getUserById(int userId) {
-        return usersDao.findById(userId).get();
+        return usersRepository.findById(userId).get();
     }
 }

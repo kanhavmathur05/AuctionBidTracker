@@ -1,4 +1,4 @@
-package com.auctionbidtracker.models;
+package com.auctionbidtracker.entities;
 
 import javax.persistence.*;
 
@@ -7,10 +7,10 @@ import javax.persistence.*;
 public class Item {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String itemName;
-    private String basePrice;
+    private int basePrice;
 
     public int getId() {
         return id;
@@ -28,11 +28,11 @@ public class Item {
         this.itemName = itemName;
     }
 
-    public String getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 
-    public void setBasePrice(String basePrice) {
+    public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
     }
 }

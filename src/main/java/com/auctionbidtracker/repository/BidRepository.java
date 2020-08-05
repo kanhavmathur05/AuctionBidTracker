@@ -1,6 +1,6 @@
-package com.auctionbidtracker.dao;
+package com.auctionbidtracker.repository;
 
-import com.auctionbidtracker.models.Bid;
+import com.auctionbidtracker.entities.Bid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.CrudRepository;
@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.TreeSet;
 
 @Repository
-public interface BidDao extends CrudRepository<Bid, Integer> {
+public interface BidRepository extends CrudRepository<Bid, Integer> {
 
-    Page<Bid> findAllByItemId(int itemId, Pageable pageable);
+    Page<Bid> findAllByItemIdOrderByBidPriceDesc(int itemId, Pageable pageable);
 
     TreeSet<Bid> findAllByItemId(int itemId);
 

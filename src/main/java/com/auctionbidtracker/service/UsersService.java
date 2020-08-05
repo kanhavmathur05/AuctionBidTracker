@@ -1,10 +1,11 @@
 package com.auctionbidtracker.service;
 
-import com.auctionbidtracker.models.Users;
+import com.auctionbidtracker.dto.UsersDTO;
+import com.auctionbidtracker.entities.Users;
 
 
 public interface UsersService {
-    Users addUser(Users user);
+    UsersDTO addUser(UsersDTO usersDTO);
 
     Users getUserById(int userId);
 }

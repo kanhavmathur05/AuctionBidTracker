@@ -1,4 +1,4 @@
-package com.auctionbidtracker.models;
+package com.auctionbidtracker.entities;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Challenge {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private LocalDate startTime;

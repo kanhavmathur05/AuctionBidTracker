@@ -1,7 +1,7 @@
 package com.auctionbidtracker.service;
 
 import com.auctionbidtracker.dto.BidDTO;
-import com.auctionbidtracker.models.Bid;
+import com.auctionbidtracker.entities.Bid;
 import com.auctionbidtracker.vm.ItemVm;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

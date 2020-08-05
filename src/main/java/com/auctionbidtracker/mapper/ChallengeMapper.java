@@ -1,7 +1,7 @@
 package com.auctionbidtracker.mapper;
 
 import com.auctionbidtracker.dto.ChallengeDTO;
-import com.auctionbidtracker.models.Challenge;
+import com.auctionbidtracker.entities.Challenge;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

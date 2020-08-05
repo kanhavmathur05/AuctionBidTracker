@@ -1,4 +1,4 @@
-package com.auctionbidtracker.models;
+package com.auctionbidtracker.entities;
 
 import lombok.Data;
 
@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Bid {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private int userId;
     private int itemId;

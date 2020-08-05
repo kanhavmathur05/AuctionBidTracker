@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface ItemService {
     List<ItemDTO> getItemsList(int userId);
+
+    ItemDTO createItem(ItemDTO itemDTO);
 }

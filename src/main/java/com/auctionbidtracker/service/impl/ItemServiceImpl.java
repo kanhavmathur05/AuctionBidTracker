@@ -1,11 +1,11 @@
 package com.auctionbidtracker.service.impl;
 
 
-import com.auctionbidtracker.dao.ItemDao;
 import com.auctionbidtracker.dto.ItemDTO;
 import com.auctionbidtracker.mapper.ItemMapper;
-import com.auctionbidtracker.models.Bid;
-import com.auctionbidtracker.models.Item;
+import com.auctionbidtracker.entities.Bid;
+import com.auctionbidtracker.entities.Item;
+import com.auctionbidtracker.repository.ItemRepository;
 import com.auctionbidtracker.service.BidService;
 import com.auctionbidtracker.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import java.util.TreeSet;
 public class ItemServiceImpl implements ItemService {
 
     @Autowired
-    ItemDao itemDao;
+    ItemRepository itemRepository;
 
     @Autowired
     BidService bidService;
@@ -40,12 +40,19 @@ public class ItemServiceImpl implements ItemService {
         if (!itemSet.isEmpty()) {
             List<Item> tempResultItemList = new ArrayList<>();
             for (Integer itemId : itemSet) {
-                tempResultItemList.add(itemDao.findById(itemId.intValue()).get());
+                tempResultItemList.add(itemRepository.findById(itemId.intValue()).get());
             }
             result = itemMapper.toDTOList(tempResultItemList);
         } else {
             result = new ArrayList<>();
         }
         return result;
+    }
+
+    @Override
+    public ItemDTO createItem(ItemDTO itemDTO) {
+        Item item = itemMapper.toEntity(itemDTO);
+        itemDTO = itemMapper.toDTO(itemRepository.save(item));
+        return itemDTO;
     }
 }

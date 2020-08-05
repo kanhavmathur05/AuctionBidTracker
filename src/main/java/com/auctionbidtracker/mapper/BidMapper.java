@@ -1,7 +1,7 @@
 package com.auctionbidtracker.mapper;
 
 import com.auctionbidtracker.dto.BidDTO;
-import com.auctionbidtracker.models.Bid;
+import com.auctionbidtracker.entities.Bid;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 import org.springframework.data.domain.Page;

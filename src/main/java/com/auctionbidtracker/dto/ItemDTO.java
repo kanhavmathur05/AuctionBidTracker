@@ -3,7 +3,7 @@ package com.auctionbidtracker.dto;
 public class ItemDTO {
     private int id;
     private String itemName;
-    private String basePrice;
+    private int basePrice;
 
     public int getId() {
         return id;
@@ -21,11 +21,11 @@ public class ItemDTO {
         this.itemName = itemName;
     }
 
-    public String getBasePrice() {
+    public int getBasePrice() {
         return basePrice;
     }
 
-    public void setBasePrice(String basePrice) {
+    public void setBasePrice(int basePrice) {
         this.basePrice = basePrice;
     }
 }
